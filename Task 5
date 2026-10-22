@@ -1,0 +1,24 @@
+
+def read_number(message):
+    """Read a valid decimal number."""
+    while True:
+        text = input(message).strip()
+
+        try:
+            return float(text)
+        except ValueError:
+            print("Invalid number. Try again.")
+
+
+litres = read_number("Enter litres: ")
+fat = read_number("Enter fat percentage: ")
+snf = read_number("Enter SNF percentage: ")
+
+if litres <= 0:
+    print("Litres must be positive.")
+elif not 2.0 <= fat <= 7.0:
+    print("Fat must be between 2.0 and 7.0.")
+else:
+    print(f"Litres: {litres:8.2f}")
+    print(f"Fat:    {fat:8.2f}%")
+    print(f"SNF:    {snf:8.2f}%")

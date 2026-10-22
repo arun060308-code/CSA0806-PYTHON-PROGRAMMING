@@ -1,0 +1,20 @@
+from decimal import Decimal
+
+# Named constants
+BASE_RATE = Decimal("30.00")
+STANDARD_FAT = Decimal("3.5")
+STANDARD_SNF = Decimal("8.5")
+FAT_STEP_VALUE = Decimal("0.40")
+SNF_STEP_VALUE = Decimal("0.30")
+
+# Farmer details
+farmer = ("F001", Decimal("10.0"),
+          Decimal("3.5"), Decimal("8.5"), "Morning")
+
+# Display farmer details
+print("Farmer ID:", farmer[0])
+print("Litres:", farmer[1])
+print("Fat percentage:", farmer[2])
+print("SNF percentage:", farmer[3])
+print("Shift:", farmer[4])
+print("Base rate:", BASE_RATE)
